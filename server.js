@@ -24,9 +24,9 @@ const connect = async () => {
   }
 };
 
-app.use(cors({ origin: "https://refferrwebsite.onrender.com", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
